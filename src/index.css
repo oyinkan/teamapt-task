@@ -1,13 +1,250 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background: url("/public/background.svg");
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem 6rem;
+  padding-bottom: 0;
+  height: 100vh;
+}
+.pt-10 {
+  padding-top: 2.5rem;
+}
+.text-center {
+  text-align: center;
+}
+.block {
+  display: block;
+}
+.hidden,
+.hidden-md {
+  display: none;
+}
+.text-white {
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.pt-5 {
+  padding-top: 1.25rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.font-bold {
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.days {
+  margin-bottom: -7px;
+}
+.duration {
+  color: rgba(255, 255, 255, 0.6);
+}
+.main-section {
+  width: 80%;
+  margin: auto;
+}
+.hero-section h1 {
+  font-size: 70px;
+  line-height: 91%;
+  letter-spacing: -0.015em;
+  color: #FFF;
+  margin-bottom: 1rem;
+}
+.hero-section h1 span {
+  font-weight: 300;
+}
+.hero-section .text-wrapper {
+  width: 55%;
+  margin: auto;
+}
+.hero-section h6 {
+  font-weight: 400;
+  font-size: 29.4318px;
+  line-height: 111.5%;
+  letter-spacing: -0.06em;
+  color: #FFF;
+}
+.hero-section h6 span,
+.how-to-play p span,
+.hero-section h1,
+.how-to-play h6 {
+  font-weight: 700;
+}
+.how-to-play {
+  width: 45%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.39) -213.5%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset 0px -1px 11px rgba(255, 255, 255, 0.17), inset 0px 2px 0px rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+}
+.how-to-play h6 {
+  font-size: 16px;
+  line-height: 160%;
+  color: #FFF;
+}
+.how-to-play p {
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: -0.02em;
+  color: #FFF;
+}
+.think-wrapper {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.think-wrapper p {
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: -0.02em;
+  color: #FFF;
+}
+.btn-play {
+  background: #ECAB03;
+  border-clor: #ECAB03;
+  border-radius: 4px;
+  padding: 0.75rem 2.5rem;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #FFF;
+}
+.btn-play img {
+  display: inline;
+  right: 15px;
+  top: 15px;
+}
+.three,
+.four,
+.one,
+.btn-play img {
+  position: absolute;
+}
+.four {
+  right: 0;
+}
+.one {
+  top: -25px;
+  right: 50px
+}
+.main-section,
+.hero-section .text-wrapper,
+.btn-play,
+.animations {
+  position: relative;
+}
+.coin {
+  position: absolute;
+  animation: MoveUpDown 1s linear infinite;
+  bottom: 0;
+}
+.coin-left {
+  left: 0;
+  top: -5rem;
+}
+.coin-right {
+  right: -4rem;
+  top: 4rem;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    padding: 2rem 1rem;
+  }
+  .hero-section .text-wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .how-to-play {
+    width: 100%;
+  }
+  .hero-section .text-wrapper {
+    width: 90%;
+  }
+  .hero-section h1 {
+    font-size: 40px;
+    line-height: 40.8px;
+  }
+  .hero-section h6 {
+    font-size: 16px;
+  }
+  .coin-left {
+    left: -6rem;
+  }
+  .coin-right {
+    right: 0;
+    top: -0.5rem;
+  }
+  .hidden-md {
+    display: block;
+  }
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main-section {
+    width: 100%;
+  }
+  .hero-section h1 {
+    font-size: 60px;
+  }
+  .hero-section h6 {
+    font-size: 22px;
+  }
 }
